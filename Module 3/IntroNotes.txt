@@ -1,0 +1,3 @@
+ - Typescript will not stop you from decompiling if there is errors... it will still compile in case it made a mistake
+
+ refer to tsconfig file for more notes

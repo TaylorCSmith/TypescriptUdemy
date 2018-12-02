@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true, 
+    "sourceMap": false,         // the ts file will also be accessible in 'sources' for chrome developer... for debugging through ts code (default is false)
+    "noEmitOnError": true,      // will prevent compile to js if an error is found (default is false)
+    "noImplicitAny": true       // warns you when "any" is implicitly set to a variable (default is false)
+  }, 
+  "exclude": [
+    "node_modules"
+  ]
+}
+
+// refer to documentation on https://www.typescriptlang.org/docs/handbook/compiler-options.html
+// ts 2.0 improved intelligence of compiler... 

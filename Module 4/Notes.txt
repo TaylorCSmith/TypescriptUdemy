@@ -1,0 +1,1 @@
+Can compile to ES5 even though you're coding with ES6 features and work correctly
