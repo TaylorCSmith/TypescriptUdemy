@@ -93,6 +93,7 @@ class AdminTS {
 new AdminTS(); 
 
 
+<<<<<<< HEAD
 // default parameters can also include "logic" although it's not considered good practice to include complex logic/operations within the parameters 
 
 const countdownWithEnding = ( start: number = 10, end: number = start - 5): void => {
@@ -163,6 +164,30 @@ const { userName, age } = userData;
 
 // can alias names. 
 const { userName: myName, age: myAge } = userData; 
+=======
+
+// ******************************** template literals ********************************
+
+const userName = "Max"; 
+
+// not that complex... and can't use multiline strings... 
+const greetingTwo = "Hello, I'm " + userName; 
+console.log(greetingTwo); // console -> Hello, I'm Max
+
+// back ticks -> ` ` allow you to write more complicated strings
+const greetingThree = ` This is a heading!
+I'm ${userName}. 
+This is cool!`;
+
+console.log(greetingThree); // console -> multiline string
+
+// template literals allow you to use variables within strings... 
+
+
+// ******************************* other ES6 features ********************************
+// these are more ES6 features supported by typescript... not typescript specific... 
+// symbols and iteraters among others
+>>>>>>> 041e9f4edfb8aa9081f3a5957939f4d29abb6685
 
 
 
