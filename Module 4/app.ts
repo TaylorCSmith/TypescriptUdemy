@@ -91,3 +91,78 @@ class AdminTS {
 }
 
 new AdminTS(); 
+
+
+// default parameters can also include "logic" although it's not considered good practice to include complex logic/operations within the parameters 
+
+const countdownWithEnding = ( start: number = 10, end: number = start - 5): void => {
+    while (start > end) {
+        start --;
+    }; 
+    console.log('done!', start); 
+} 
+
+// *************************** Rest and Spread operators ****************************
+
+console.log("REST AND SPREAD"); 
+
+const numbers = [1, 2, 34, 99, -13];
+
+
+// math function doesn't allow you to check an array... you need to literally enter the list of numbers
+// expects type numbers and not numbers[]
+
+console.log(Math.max(33, 54, 23, 554)); // console => 554
+
+// can solve by using the "spread" operator
+console.log(Math.max(...numbers)); // console => 99
+
+// '...' spread operator allows you to not have to do loops or anything like that... "spreads" out your array...
+
+// rest operator
+
+// could do this: 
+function makeArray(argOne: number, argTwo: number, argThree: number) {
+    return [argOne, argTwo, argThree]; 
+};
+
+// however... not flexible... so do the following:
+function makeArrayWithRestOperator(name: string, ...args: number[]) {
+    return args; 
+}
+console.log(makeArrayWithRestOperator("jim", 5, 2, 3)); // console => [5, 2, 3]
+// typescript understands that if you are passing parameters... "..." will be a spread... however if "..." is in the function definition parameters... it will assume you meant the rest operator
+
+// spread and rest are extremely useful for lists or arrays
+
+
+// *************************** destructuring ****************************
+
+console.log("DESTRUCTURING"); 
+
+const myHobbies = ["cooking", "sports"]; 
+console.log(myHobbies[0], myHobbies[1]); // console => cooking, sports
+
+// storing in variables...: 
+const hobbyOne = myHobbies[0];
+const hobbyTwo = myHobbies[1]; 
+console.log(hobbyOne, hobbyTwo); // console => same as above... obviously
+
+// destructuring works as follows: 
+const [hobbyOneDestruct, hobbyTwoDestruct] = myHobbies;
+// does the same as above... except with one line of code! hobbyOneDestruct will receive the "cooking" value... and hobbyTwoDestruct will receive the "sports" value!
+console.log(hobbyOneDestruct, hobbyTwoDestruct); // console => cooking, sports
+
+// can also destruct user data... not just arrays...
+
+const userData = { userName: "Max", age: 27 }; 
+
+// important note... the names of the keys need to match the variables that you're assigning... the order doesn't matter... 
+// also, curly brackets are important if it's an object... brackets are array specific
+const { userName, age } = userData; 
+
+// can alias names. 
+const { userName: myName, age: myAge } = userData; 
+
+
+
