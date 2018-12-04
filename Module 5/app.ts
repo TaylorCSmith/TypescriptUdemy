@@ -86,3 +86,55 @@ class Tim extends PersonTS {
 
 // jim only expects one parameter as a default/overwrite is already set for name
 const tim = new Jim("jim");
+
+
+
+
+// merge conflicts start here during next pull/push
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// merge conflicts end here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
