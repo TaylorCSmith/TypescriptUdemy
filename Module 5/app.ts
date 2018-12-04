@@ -123,15 +123,70 @@ const tim = new Jim("jim");
 
 
 
+// ****************************************** private constructors *****************************************
+/*
+// singleton class... when you only want one instance during runtime.
+class OnlyOne {
+    private static instance: OnlyOne; 
 
+    // the class is forced to only be used as a singleton
+    private constructor(public name: string) {} // shortcut to initialize a public property "name"
 
+    static getInstance() {
+        if(!OnlyOne.instance) { // checks to see if an instance has been created
+            OnlyOne.instance = new OnlyOne('The only one'); // new instance created
+        }
+        return OnlyOne.instance; // if already created... return current instance
+    }
+}
 
+// let wrong = new OnlyOne('the only one'); // error that OnlyOne is private and only accessible within the class declaration
+let right = OnlyOne.getInstance(); 
+console.log(right.name); 
 
+right.name = "something else"; // allowable since name is a public property
 
+*/
 
+// ****************************************** private constructors *****************************************
+// singleton class... when you only want one instance during runtime.
+class OnlyOne {
+    private static instance: OnlyOne; 
 
+    // the class is forced to only be used as a singleton
+    // adding the "readonly" keyword is a shortcut of making a "getter" but not a "setter" for the name property 
+    private constructor(public readonly name: string) {} // shortcut to initialize a public property "name"
 
+    static getInstance() {
+        if(!OnlyOne.instance) { // checks to see if an instance has been created
+            OnlyOne.instance = new OnlyOne('The only one'); // new instance created
+        }
+        return OnlyOne.instance; // if already created... return current instance
+    }
+}
 
+// let wrong = new OnlyOne('the only one'); // error that OnlyOne is private and only accessible within the class declaration
+let right = OnlyOne.getInstance(); 
+console.log(right.name); 
+
+// right.name = "something else"; // not allowable since name is a readonly property
+
+// equivalent of using "readonly" but with name included in the constructor... not using the shortcut displayed above: 
+class OnlyOneReadOnlyExample { 
+    private static instance: OnlyOneReadOnlyExample; 
+    public readonly name: string; 
+
+    private constructor (name: string) {
+        this.name = name; 
+    }
+
+    static getInstance() {
+        if(!OnlyOneReadOnlyExample.instance) {
+            OnlyOneReadOnlyExample.instance = new OnlyOneReadOnlyExample('the only only one'); 
+        }
+        return OnlyOneReadOnlyExample.instance;
+    }
+}
 
 
 
