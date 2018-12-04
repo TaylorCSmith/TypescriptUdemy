@@ -54,11 +54,11 @@ greetFromExercises();
 greetFromExercises("Anna"); 
 
 // Exercise 3
-var numbers = [-3, 33, 38, 5]; 
-console.log(Math.min(...numbers)); 
+var numbersExercise = [-3, 33, 38, 5]; 
+console.log(Math.min(...numbersExercise)); 
 
 // Exercise 4
-var newArray = [55, 20, ...numbers]; 
+var newArray = [55, 20, ...numbersExercise]; 
 
 // Exercise 5
 var testResults = [3.89, 2.00, 1.38]; 
