@@ -1,0 +1,8 @@
+{
+  "name": "",
+  "version": "",
+  "description": "Course Name: Understanding TypeScript\r Course Author: Maximilian Schwarzmuller\r Course Link: https://www.udemy.com/understanding-typescript/",
+  "dependencies": {
+    "typescript": "^3.2.1"
+  }
+}
