@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learning Typescript</title>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // configuration for SystemJS to be able to use modules
+        // set your baseURL reference path
+        SystemJS.config({
+            baseURL: '/', 
+            packages: {
+                '/':{
+                    defaultExtension: 'js'
+                }
+            }
+        });
+        SystemJS.import('app.js'); 
+    </script>
+</body>
+</html>
