@@ -84,5 +84,67 @@ class Tim extends PersonTS {
     }
 }
 
-// jim only expects one parameter as a default/overwrite is already set for name
+// Jim only expects one parameter as a default/overwrite is already set for name
 const tim = new Jim("jim");
+
+// important to remember that everything is inherited from the base class except for private methods/properties
+// can rewrite or extend each...
+
+
+// ****************************************** getters and setters *****************************************
+class Plant {
+    private _species: string = "Default"; // normally private properties not prepended with '_'... but controlled access being added...
+
+    get species() {
+        return this._species; 
+    }
+
+    set species(value: string) {    // use for validation in projects...? or better way? 
+        if (value.length > 3) {
+            this._species = value; 
+        } else {
+            this._species = "Default";
+        }
+    }
+}
+
+let plant = new Plant(); 
+
+console.log(plant.species); // console => Default
+
+plant.species = "AB";
+console.log(plant.species); // console => Default
+
+plant.species = "Green Plant"; 
+console.log(plant.species); // console => Green Plant
+
+
+// ************************* static properties and methods *********************
+class Helpers {
+    static PI: number = 3.14; // no need to instantiate "Helpers" class... can also use with method... similar to other languages...
+    static calcCircumference(diameter: number): number {
+        return this.PI * diameter; 
+    }
+}
+
+console.log(2 * Helpers.PI); // console => 3.14
+console.log(Helpers.calcCircumference(8)); // console => 25.12
+
+
+// ****************************** abstract classes *****************************
+// must always be inherited from... required to be extended
+// why? class has no need to be instansiated but only provides functionality that other classes need. 
+abstract class Project { 
+    projectName: string = "Default"; 
+    budget: number; 
+
+    // needs to be overwritten
+    abstract changeName(name: string): void; // no curly braces... only define how the function should look and return... not any logic... 
+
+    // does not need to be overwritten
+    calcBudget() {
+        return this.budget * 2; 
+    }
+}
+
+
