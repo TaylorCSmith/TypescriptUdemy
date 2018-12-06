@@ -147,11 +147,21 @@ abstract class Project {
     }
 }
 
-/*
 class ITProject extends Project {
-
+    changeName(name: string): void {
+        this.projectName = name; 
+    }
 }
-*/
+
+let newProject = new ITProject(); 
+console.log(newProject); 
+newProject.changeName('super it project'); 
+console.log(newProject); 
+
+// notes: 
+//  abstract classes NEED to be implemented... 
+//  abstract methods need to be made unique for where they're inherited
+//  like a "blueprint"... need some specialized to work off that blueprint...
 
 // ****************************************** private constructors *****************************************
 /*
