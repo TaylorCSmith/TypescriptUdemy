@@ -31,9 +31,10 @@ namespace MyMath{
 const PI = 2.99; 
 console.log(PI); // console => 2.99... PI = 3.14 is only within the MyMath namespace... 
 
+/*
 console.log(MyMath.calculateRectangle(10, 20));
 console.log(MyMath.calculateCircumference(3)); 
-
+*/
 
 // ************************************* namespaces and multiple files *****************************
 // if you have separate files for namespaces which contain a lot of content... you can just reference every individual file in your html
@@ -58,11 +59,12 @@ namespace MyMathTwo {
 }
 
 // can import namespaces... 
+/*
 import math = MyMath;
 
 console.log(math.calculateCircumference(5)); 
 console.log(math.calculateRectangle(4,3)); 
-
+*/
 /*
 So that's just some advanced techniques on name spaces but that is in general how you use namespace
 
