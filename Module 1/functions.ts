@@ -1,16 +1,18 @@
 
 // ----------------------- functions and return types ----------------------
 // : string says that only a string will be returned
-function returnMyName(): string {           
-    return myName;
-}
 
-console.log(returnMyName()); 
 
-// without explicitly assigning a type... will have return type "void"
-function sayHello(): void {                       
-    console.log("Hello!"); 
-}
+    function returnMyName(): string {           
+        return name;
+    }
+    
+    console.log(returnMyName()); 
+    
+    // without explicitly assigning a type... will have return type "void"
+    function sayHello(): void {                       
+        console.log("Hello!"); 
+    }
 
 
 // --------------------------- argument types ----------------------------

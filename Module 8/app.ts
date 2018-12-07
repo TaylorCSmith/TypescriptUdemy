@@ -128,7 +128,7 @@ namespace MultipleGenericTypes {
         multiplyValue: U; 
 
         calculate(): number {
-            return +this.baseValue * +this.multiplyValue;   // '+' sign prepended to variable name means to cast as a number
+            return +this.baseValue * <number>this.multiplyValue;   // '+' sign prepended to variable name means to cast as a number
         }
     }
 
