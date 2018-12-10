@@ -1,0 +1,27 @@
+<!doctype html>
+
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, user-scalable=no, intitial-scale=1.0, maximum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>Learning Typescript</title>
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+    </head>
+    <body>
+        <div id="app">Change it with jQuery</div>
+
+        <script>
+            SystemJs.config({
+                map: {
+                    "jQuery": "node_modules/jquery/dist/jquery.min.js"
+                }, 
+                baseURL: '/', 
+                defaultJSExtensions:true
+            });
+            SystemJS.import('app.js'); 
+        </script>
+    </body>
+
+</html>

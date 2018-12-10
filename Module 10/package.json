@@ -11,5 +11,8 @@
   "devDependencies": {
     "@types/jquery": "^3.3.22",
     "server-lite": "^1.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
   }
 }
